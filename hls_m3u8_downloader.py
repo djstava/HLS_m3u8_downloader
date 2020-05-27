@@ -72,8 +72,6 @@ def concatenate_files(filelist, source, destination, name):
 			with open(os.path.join(source, file), 'rb') as readfile:
 				shutil.copyfileobj(readfile, outfile)
 
-	outfile.close()
-
 def m3u8_load(uri):
 	r = requests.get(uri)
 	m3u8_obj = m3u8.M3U8(r.text)
